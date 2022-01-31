@@ -36,7 +36,7 @@
     public:
 
         void update() noexcept {
-            if(!GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi))
+            if(!GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &data))
                 return;
 
             this->columns = ABS(this->data.srWindow.Right - this->data.srWindow.Left + 1);
